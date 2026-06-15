@@ -211,7 +211,22 @@ a:hover {
     font-size: 0.95rem;
     color: var(--text);
     line-height: 1.8;
-    margin-bottom: 24px;
+    margin-bottom: 12px;
+}
+
+.contact-info {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+
+.contact-info i {
+    color: var(--primary);
+    width: 18px;
 }
 
 .hero-links {
@@ -484,6 +499,15 @@ a:hover {
     gap: 8px;
 }
 
+.company-logo-img {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    object-fit: contain;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
 .timeline-header h3 {
     font-size: 1.1rem;
     font-weight: 600;
@@ -538,12 +562,18 @@ a:hover {
     width: 48px;
     height: 48px;
     border-radius: 12px;
-    background: var(--primary-light);
+    background: white;
+    border: 1px solid var(--border);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--primary);
-    font-size: 1.2rem;
+    overflow: hidden;
+}
+
+.school-logo {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
 }
 
 .edu-content h3 {
@@ -756,6 +786,11 @@ a:hover {
 
     .hero-links {
         justify-content: center;
+    }
+
+    .contact-info {
+        justify-content: center;
+        text-align: center;
     }
 
     .avatar-photo {

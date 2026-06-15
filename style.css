@@ -216,16 +216,11 @@ a:hover {
     flex-shrink: 0;
 }
 
-.avatar-placeholder {
+.avatar-photo {
     width: 180px;
     height: 180px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--primary-light), #c7d2fe);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 4rem;
-    color: var(--primary);
+    object-fit: cover;
     box-shadow: var(--shadow-lg);
 }
 
@@ -244,32 +239,6 @@ a:hover {
     font-weight: 700;
     margin-bottom: 40px;
     color: var(--text);
-}
-
-/* ===== News ===== */
-.news-section {
-    padding: 50px 24px;
-    background: var(--bg-alt);
-}
-
-.news-list {
-    list-style: none;
-}
-
-.news-list li {
-    padding: 10px 0;
-    font-size: 0.95rem;
-    border-bottom: 1px solid var(--border);
-}
-
-.news-list li:last-child {
-    border-bottom: none;
-}
-
-.news-date {
-    color: var(--primary);
-    font-weight: 600;
-    margin-right: 12px;
 }
 
 /* ===== Publications ===== */
@@ -635,10 +604,9 @@ a:hover {
         justify-content: center;
     }
 
-    .avatar-placeholder {
+    .avatar-photo {
         width: 140px;
         height: 140px;
-        font-size: 3rem;
     }
 
     .pub-item {

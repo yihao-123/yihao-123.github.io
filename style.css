@@ -499,14 +499,6 @@ a:hover {
     gap: 8px;
 }
 
-.company-logo-img {
-    height: 28px;
-    width: auto;
-    border-radius: 4px;
-    margin-right: 6px;
-    vertical-align: middle;
-}
-
 .timeline-header h3 {
     font-size: 1.1rem;
     font-weight: 600;

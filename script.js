@@ -6,6 +6,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const backToTop = document.getElementById('backToTop');
     const langToggle = document.getElementById('langToggle');
 
+    // --- Safe localStorage wrapper (handles file://, private mode, etc.) ---
+    function getStoredLang() {
+        try { return localStorage.getItem('homepageLang'); } catch (e) { return null; }
+    }
+    function setStoredLang(lang) {
+        try { localStorage.setItem('homepageLang', lang); } catch (e) { /* ignore */ }
+    }
+
     const translations = {
         en: {
             'nav.logo': 'Hao Yi',
@@ -27,8 +35,10 @@ document.addEventListener('DOMContentLoaded', () => {
             'exp.tencent.date': 'Apr 2026 - Present',
             'exp.tencent.role': 'LLM Post-training Algorithm Engineer Intern (青云计划) | Yuanbao Business Unit',
             'exp.tencent.desc': 'Proposed a Goal DAG-based evaluation mechanism for OneAgent with user simulator and LLM Judge. Built evaluation framework for scheduling and image generation skills. OneAgent outperforms Claude by ~5% on these tasks. The solution is deployed on Yuanbao APP.',
+            'exp.amap.date': 'Jul 2025 - Feb 2026',
             'exp.amap.role': 'LLM Post-training Algorithm Intern | Foundation Model Team',
             'exp.amap.desc': 'Designed dynamic capability-aware curriculum learning for AMAP STAgent SFT. Qwen-30B outperformed Qwen-235B on TravelBench with our method.',
+            'exp.kuaishou.date': 'Apr 2024 - Jun 2025',
             'exp.kuaishou.role': 'LLM Algorithm Intern (RLHF) | Foundation LLM Team',
             'exp.kuaishou.desc': 'Proposed self-evolving preference learning framework with dual-truncation reward strategy, achieving 12.0% and 15.4% improvements on AlpacaEval-v2 and Arena-Hard.',
             'edu.ruc.degree': 'M.S. in Artificial Intelligence',
@@ -62,8 +72,10 @@ document.addEventListener('DOMContentLoaded', () => {
             'exp.tencent.date': '2026.04 - 至今',
             'exp.tencent.role': '大模型后训练算法工程师实习生（青云计划）| 元宝业务线',
             'exp.tencent.desc': '提出面向 OneAgent 的 Goal DAG 评测机制，结合用户模拟器与 LLM Judge；构建调度和图像生成技能的评测框架，使 OneAgent 在相关任务上相比 Claude 提升约 5%，方案已部署于元宝 APP。',
+            'exp.amap.date': '2025.07 - 2026.02',
             'exp.amap.role': '大模型后训练算法实习生 | 基础模型团队',
             'exp.amap.desc': '为 AMAP STAgent SFT 设计动态能力感知课程学习方法，使 Qwen-30B 在 TravelBench 上超过 Qwen-235B。',
+            'exp.kuaishou.date': '2024.04 - 2025.06',
             'exp.kuaishou.role': '大模型算法实习生（RLHF）| 基础大模型团队',
             'exp.kuaishou.desc': '提出带有双截断奖励策略的自进化偏好学习框架，在 AlpacaEval-v2 和 Arena-Hard 上分别取得 12.0% 和 15.4% 的提升。',
             'edu.ruc.degree': '人工智能硕士',
@@ -97,15 +109,15 @@ document.addEventListener('DOMContentLoaded', () => {
             el.classList.toggle('active', el.dataset.langLabel === lang);
         });
 
-        localStorage.setItem('homepageLang', lang);
+        setStoredLang(lang);
     }
 
-    const savedLang = localStorage.getItem('homepageLang') || 'en';
+    const savedLang = getStoredLang() || 'en';
     setLanguage(savedLang);
 
     if (langToggle) {
         langToggle.addEventListener('click', () => {
-            const currentLang = localStorage.getItem('homepageLang') || 'en';
+            const currentLang = getStoredLang() || 'en';
             setLanguage(currentLang === 'en' ? 'zh' : 'en');
         });
     }

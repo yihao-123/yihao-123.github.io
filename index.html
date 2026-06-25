@@ -15,19 +15,26 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="nav-logo">Hao Yi</a>
+            <a href="#" class="nav-logo" data-i18n="nav.logo">Hao Yi</a>
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#skills">Skills</a></li>
+                <li><a href="#about" data-i18n="nav.about">About</a></li>
+                <li><a href="#publications" data-i18n="nav.publications">Publications</a></li>
+                <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+                <li><a href="#education" data-i18n="nav.education">Education</a></li>
+                <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
             </ul>
-            <button class="nav-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <div class="nav-actions">
+                <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language">
+                    <span class="lang-option active" data-lang-label="en">EN</span>
+                    <span class="lang-divider">/</span>
+                    <span class="lang-option" data-lang-label="zh">中</span>
+                </button>
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </nav>
 
@@ -37,13 +44,15 @@
             <div class="hero-content">
                 <div class="hero-text">
                     <h1>Hao Yi <span class="chinese-name">（易浩）</span></h1>
-                    <p class="subtitle">M.S. Student in Artificial Intelligence</p>
+                    <p class="subtitle" data-i18n="hero.subtitle">M.S. Student in Artificial Intelligence</p>
                     <p class="affiliation">
                         <a href="https://ai.ruc.edu.cn/" target="_blank">Gaoling School of Artificial Intelligence</a>, 
                         <a href="https://www.ruc.edu.cn/" target="_blank">Renmin University of China</a>
                     </p>
-                    <p class="bio">
-                        I am a second-year Master's student at Renmin University of China. My research interests focus on 
+                    <p class="bio" data-i18n-html="hero.bio">
+                        I am a second-year Master's student at Renmin University of China, advised by 
+                        <a href="http://ai.ruc.edu.cn/academicfaculty/szdwn/ly/index.htm" target="_blank">Prof. Yong Liu</a>
+                        (Tenured Associate Professor and PhD Supervisor). My research interests focus on 
                         <strong>Large Language Model Alignment</strong>, <strong>Reinforcement Learning from Human Feedback (RLHF)</strong>, 
                         and <strong>LLM-based Agents</strong>.
                     </p>
@@ -70,24 +79,24 @@
 <!-- Publications Section -->
     <section class="section" id="publications">
         <div class="container">
-            <h2 class="section-title">📝 Publications</h2>
+            <h2 class="section-title" data-i18n="section.publications">📝 Publications</h2>
             <div class="publications-list">
                 <div class="pub-item">
                     <div class="pub-venue"><span class="venue-badge iclr">ICLR 2026</span></div>
                     <div class="pub-content">
                         <h3 class="pub-title">Learn More with Less: Uncertainty Consistency Guided Query Selection for RLVR</h3>
                         <p class="pub-authors"><strong>Hao Yi</strong>, et al.</p>
-                        <p class="pub-desc">
+                        <p class="pub-desc" data-i18n="pub.iclr.desc">
                             We introduce active learning to optimize Reinforcement Learning from Verifiable Rewards (RLVR), 
                             proposing an uncertainty consistency metric to evaluate subjective-objective uncertainty alignment. 
                             Our method achieves full-dataset performance using only 30% of the data.
                         </p>
                         <div class="pub-links">
                             <a href="https://arxiv.org/abs/2601.22595" target="_blank" class="pub-link">
-                                <i class="fas fa-file-pdf"></i> Paper
+                                <i class="fas fa-file-pdf"></i> <span data-i18n="link.paper">Paper</span>
                             </a>
                             <a href="https://github.com/yihao-123/uncertainty-consistency" target="_blank" class="pub-link">
-                                <i class="fab fa-github"></i> Code
+                                <i class="fab fa-github"></i> <span data-i18n="link.code">Code</span>
                             </a>
                         </div>
                         <div class="pub-figures">
@@ -109,14 +118,14 @@
                     <div class="pub-content">
                         <h3 class="pub-title">SPPD: Self-training with Process Preference Learning Using Dynamic Value Margin</h3>
                         <p class="pub-authors"><strong>Hao Yi</strong>, et al.</p>
-                        <p class="pub-desc">
+                        <p class="pub-desc" data-i18n="pub.sppd.desc">
                             We propose process preference learning with step-level MDP and dynamic value margin based on 
                             Bellman equation. Theoretically equivalent to an efficient online policy gradient algorithm, 
                             achieving 12.2% and 5.3% improvements on MATH500 and GSM8k respectively.
                         </p>
                         <div class="pub-links">
                             <a href="https://arxiv.org/abs/2502.13516" target="_blank" class="pub-link">
-                                <i class="fas fa-file-pdf"></i> Paper
+                                <i class="fas fa-file-pdf"></i> <span data-i18n="link.paper">Paper</span>
                             </a>
                         </div>
                         <div class="pub-figures">
@@ -139,17 +148,17 @@
     <!-- Experience Section -->
     <section class="section section-alt" id="experience">
         <div class="container">
-            <h2 class="section-title">💼 Experience</h2>
+            <h2 class="section-title" data-i18n="section.experience">💼 Experience</h2>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <div class="timeline-header">
                             <h3> Tencent (腾讯)</h3>
-                            <span class="timeline-date">Apr 2026 - Present</span>
+                            <span class="timeline-date" data-i18n="exp.tencent.date">Apr 2026 - Present</span>
                         </div>
-                        <p class="timeline-role">LLM Post-training Algorithm Engineer Intern (青云计划) | Yuanbao Business Unit</p>
-                        <p class="timeline-desc">
+                        <p class="timeline-role" data-i18n="exp.tencent.role">LLM Post-training Algorithm Engineer Intern (青云计划) | Yuanbao Business Unit</p>
+                        <p class="timeline-desc" data-i18n="exp.tencent.desc">
                             Proposed a Goal DAG-based evaluation mechanism for OneAgent with user simulator and LLM Judge. 
                             Built evaluation framework for scheduling and image generation skills. OneAgent outperforms Claude 
                             by ~5% on these tasks. The solution is deployed on Yuanbao APP.
@@ -164,8 +173,8 @@
                             <h3> Alibaba - Amap (高德)</h3>
                             <span class="timeline-date">Jul 2025 - Feb 2026</span>
                         </div>
-                        <p class="timeline-role">LLM Post-training Algorithm Intern | Foundation Model Team</p>
-                        <p class="timeline-desc">
+                        <p class="timeline-role" data-i18n="exp.amap.role">LLM Post-training Algorithm Intern | Foundation Model Team</p>
+                        <p class="timeline-desc" data-i18n="exp.amap.desc">
                             Designed dynamic capability-aware curriculum learning for AMAP STAgent SFT. 
                             Qwen-30B outperformed Qwen-235B on TravelBench with our method.
                         </p>
@@ -179,8 +188,8 @@
                             <h3> Kuaishou (快手)</h3>
                             <span class="timeline-date">Apr 2024 - Jun 2025</span>
                         </div>
-                        <p class="timeline-role">LLM Algorithm Intern (RLHF) | Foundation LLM Team</p>
-                        <p class="timeline-desc">
+                        <p class="timeline-role" data-i18n="exp.kuaishou.role">LLM Algorithm Intern (RLHF) | Foundation LLM Team</p>
+                        <p class="timeline-desc" data-i18n="exp.kuaishou.desc">
                             Proposed self-evolving preference learning framework with dual-truncation reward strategy, 
                             achieving 12.0% and 15.4% improvements on AlpacaEval-v2 and Arena-Hard.
                         </p>
@@ -193,7 +202,7 @@
     <!-- Education Section -->
     <section class="section" id="education">
         <div class="container">
-            <h2 class="section-title">🎓 Education</h2>
+            <h2 class="section-title" data-i18n="section.education">🎓 Education</h2>
             <div class="education-list">
                 <div class="edu-item">
                     <div class="edu-icon">
@@ -201,11 +210,11 @@
                     </div>
                     <div class="edu-content">
                         <h3>Renmin University of China <span class="tag">985</span></h3>
-                        <p class="edu-degree">M.S. in Artificial Intelligence</p>
+                        <p class="edu-degree" data-i18n="edu.ruc.degree">M.S. in Artificial Intelligence</p>
                         <p class="edu-school">Gaoling School of Artificial Intelligence</p>
-                        <p class="edu-date">Sep 2024 - Present</p>
+                        <p class="edu-date" data-i18n="edu.ruc.date">Sep 2024 - Present</p>
                         <p class="edu-details">
-                            <strong>GPA:</strong> 3.81/4.00
+                            <strong data-i18n="label.gpa">GPA:</strong> 3.81/4.00
                         </p>
                     </div>
                 </div>
@@ -215,10 +224,10 @@
                     </div>
                     <div class="edu-content">
                         <h3>University of Electronic Science and Technology of China <span class="tag">985</span></h3>
-                        <p class="edu-degree">B.S. in Computer Science and Technology and Finance</p>
+                        <p class="edu-degree" data-i18n="edu.uestc.degree">B.S. in Computer Science and Technology and Finance</p>
                         <p class="edu-school">School of Computer Science and Engineering</p>
-                        <p class="edu-date">Sep 2020 - Jun 2024</p>
-                        <p class="edu-details">
+                        <p class="edu-date" data-i18n="edu.uestc.date">Sep 2020 - Jun 2024</p>
+                        <p class="edu-details" data-i18n-html="edu.uestc.details">
                             <strong>GPA:</strong> 3.97/4.00 &nbsp;|&nbsp; <strong>Rank:</strong> 1/30<br>
                             <strong>Awards:</strong> National Scholarship (2021, Top 1%), National Encouragement Scholarship (2022), 
                             First-class Academic Scholarship (2 consecutive years)
@@ -232,10 +241,10 @@
     <!-- Skills Section -->
     <section class="section section-alt" id="skills">
         <div class="container">
-            <h2 class="section-title">🛠️ Skills</h2>
+            <h2 class="section-title" data-i18n="section.skills">🛠️ Skills</h2>
             <div class="skills-grid">
                 <div class="skill-card">
-                    <h4><i class="fas fa-brain"></i> Research Areas</h4>
+                    <h4><i class="fas fa-brain"></i> <span data-i18n="skills.research">Research Areas</span></h4>
                     <div class="skill-tags">
                         <span>RLHF</span>
                         <span>DPO</span>
@@ -248,7 +257,7 @@
                     </div>
                 </div>
                 <div class="skill-card">
-                    <h4><i class="fas fa-code"></i> Frameworks & Tools</h4>
+                    <h4><i class="fas fa-code"></i> <span data-i18n="skills.tools">Frameworks & Tools</span></h4>
                     <div class="skill-tags">
                         <span>PyTorch</span>
                         <span>TRL</span>
@@ -260,7 +269,7 @@
                     </div>
                 </div>
                 <div class="skill-card">
-                    <h4><i class="fas fa-laptop-code"></i> Programming</h4>
+                    <h4><i class="fas fa-laptop-code"></i> <span data-i18n="skills.programming">Programming</span></h4>
                     <div class="skill-tags">
                         <span>Python</span>
                         <span>Data Structures & Algorithms</span>
@@ -276,7 +285,7 @@
     <footer class="footer">
         <div class="container">
             <p>&copy; 2026 Hao Yi. All rights reserved.</p>
-            <p class="footer-note">Last updated: June 2026</p>
+            <p class="footer-note" data-i18n="footer.updated">Last updated: June 2026</p>
         </div>
     </footer>
 

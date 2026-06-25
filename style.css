@@ -115,6 +115,42 @@ a:hover {
     border-radius: 2px;
 }
 
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.lang-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    height: 32px;
+    padding: 0 10px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.75);
+    color: var(--text-light);
+    font-size: 0.78rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.lang-toggle:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+    box-shadow: var(--shadow);
+}
+
+.lang-option.active {
+    color: var(--primary);
+}
+
+.lang-divider {
+    color: var(--border);
+}
+
 .nav-toggle {
     display: none;
     flex-direction: column;
@@ -763,6 +799,16 @@ a:hover {
 
     .nav-toggle {
         display: flex;
+    }
+
+    .nav-actions {
+        gap: 10px;
+    }
+
+    .lang-toggle {
+        height: 30px;
+        padding: 0 9px;
+        font-size: 0.75rem;
     }
 
     .hero-content {
